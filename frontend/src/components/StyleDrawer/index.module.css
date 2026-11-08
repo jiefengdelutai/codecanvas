@@ -1,0 +1,238 @@
+/* 移除Drawer body的默认padding */
+:global(.ant-drawer-body) {
+  padding: 0 !important;
+}
+
+/* 表单容器样式 - 添加外边距 */
+.drawerContent {
+  margin: 16px;
+}
+
+.drawerTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tab容器样式 */
+.drawerTitle :global(.ant-tabs) {
+  width: 100%;
+  margin: 0;
+  height: 36px;
+  min-height: 36px;
+}
+
+.drawerTitle :global(.ant-tabs .ant-tabs-nav) {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 36px;
+  min-height: 36px;
+  position: relative;
+}
+
+.drawerTitle :global(.ant-tabs .ant-tabs-nav-wrap) {
+  width: 100%;
+  height: 36px;
+}
+
+.drawerTitle :global(.ant-tabs .ant-tabs-nav-list) {
+  width: 100%;
+  display: flex;
+}
+
+/* Tab项样式 */
+.drawerTitle :global(.ant-tabs .ant-tabs-tab) {
+  flex: 1;
+  margin: 0;
+  padding: 6px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  height: 36px;
+  min-height: 36px;
+  font-size: 16px;
+}
+
+.drawerTitle :global(.ant-tabs .ant-tabs-tab .ant-tabs-tab-btn) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+/* 移除tab底部边距 */
+.drawerTitle :global(.ant-tabs .ant-tabs-nav) {
+  margin-bottom: 0 !important;
+}
+
+.drawerTitle :global(.ant-tabs .ant-tabs-nav::before) {
+  border-bottom: 1px solid #f0f0f0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* 确保tab紧贴顶部 */
+.drawerTitle :global(.ant-tabs .ant-tabs-ink-bar) {
+  bottom: 0;
+  z-index: 1;
+}
+
+.elementInfo {
+  font-size: 12px;
+  color: #666;
+  font-weight: normal;
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+}
+
+.drawerContent {
+  height: 100%;
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: #666;
+  text-align: center;
+}
+
+.emptyState p:first-child {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.emptyState p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+/* 自定义表单样式 */
+:global(.ant-form-item) {
+  margin-bottom: 16px;
+}
+
+:global(.ant-form-item-label) {
+  padding-bottom: 4px;
+}
+
+:global(.ant-form-item-label > label) {
+  font-size: 16px !important;
+  font-weight: 500;
+}
+
+/* 确保StyleDrawer中的表单label字体大小 */
+.drawerContent :global(.ant-form-item-label > label) {
+  font-size: 16px !important;
+  font-weight: 500;
+}
+
+/* 紧凑输入组样式 */
+:global(.ant-space-compact .ant-input) {
+  font-size: 16px;
+}
+
+/* 表单控件样式 */
+:global(.ant-input) {
+  font-size: 16px;
+}
+
+:global(.ant-select .ant-select-selector) {
+  font-size: 16px;
+}
+
+:global(.ant-select-item) {
+  font-size: 16px;
+}
+
+/* 标签页样式 */
+:global(.ant-tabs-small .ant-tabs-tab) {
+  padding: 8px 12px;
+  font-size: 16px;
+}
+
+/* 滑块样式 */
+:global(.ant-slider) {
+  margin: 8px 0;
+}
+
+/* 颜色选择器样式 */
+:global(.ant-color-picker-trigger) {
+  width: 100%;
+  height: 32px;
+}
+
+/* 抽屉头部样式 */
+:global(.ant-drawer-header) {
+  padding: 0;
+  border-bottom: none;
+  min-height: auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:global(.ant-drawer-title) {
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:global(.ant-drawer-header-title .ant-drawer-title) {
+  margin-bottom: -14px;
+}
+
+/* 抽屉内容样式 */
+:global(.ant-drawer-body) {
+  padding: 16px 24px;
+}
+
+/* 抽屉底部样式 */
+:global(.ant-drawer-footer) {
+  padding: 12px 24px;
+  border-top: 1px solid #f0f0f0;
+  background: #fff;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+}
+
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  :global(.ant-drawer) {
+    width: 100% !important;
+  }
+
+  .elementInfo {
+    font-size: 11px;
+    padding: 1px 4px;
+  }
+}

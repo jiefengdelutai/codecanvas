@@ -1,0 +1,120 @@
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+  border-color: #d9d9d9;
+}
+
+/* 缩略图区域 */
+.thumbnail {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.thumbnailIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none;
+  background: white;
+}
+
+/* 悬停覆盖层 */
+.thumbnailOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  pointer-events: none;
+}
+
+.card:hover .thumbnailOverlay {
+  background: rgba(0, 0, 0, 0.45);
+  pointer-events: all;
+}
+
+.hoverActions {
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.2s ease;
+}
+
+.card:hover .hoverActions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 信息区域 */
+.info {
+  padding: 12px 14px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.name {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #262626 !important;
+  flex: 1;
+  min-width: 0;
+}
+
+.categoryTag {
+  flex-shrink: 0;
+  font-size: 11px;
+  line-height: 18px;
+  padding: 0 6px;
+  border-radius: 4px;
+}
+
+.description {
+  font-size: 12px !important;
+  color: #8c8c8c !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 0 5px;
+  line-height: 18px;
+  border-radius: 3px;
+  margin: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4px;
+  border-top: 1px solid #f5f5f5;
+  margin-top: 2px;
+}

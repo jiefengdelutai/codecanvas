@@ -1,0 +1,196 @@
+.container {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.versionInfo {
+  padding: 12px;
+  background: #f5f5f5;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.resolutionChoice {
+  margin-bottom: 24px;
+}
+
+.resolutionChoice h4 {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.radioOption {
+  padding: 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.radioOption:hover {
+  border-color: #1890ff;
+  background: #f0f7ff;
+}
+
+.optionTitle {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.optionDesc {
+  font-size: 12px;
+  color: #666;
+}
+
+.diffSection {
+  margin-top: 24px;
+}
+
+.diffHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.diffHeader h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.diffViewContainer {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  max-height: 600px;
+  overflow: auto;
+}
+
+/* 优化滚动条样式 */
+.diffViewContainer::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.diffViewContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.diffViewContainer::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.diffViewContainer::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.noChange {
+  padding: 40px 20px;
+  text-align: center;
+  background: #f6ffed;
+  border: 1px solid #b7eb8f;
+  border-radius: 4px;
+  color: #52c41a;
+}
+
+.noChange p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.editorContainer {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.editorHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.editorHeader span:first-child {
+  font-weight: 600;
+  color: #262626;
+}
+
+.editorHint {
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+.codeComparison {
+  margin-top: 16px;
+}
+
+.comparisonHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.comparisonHeader h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.changed {
+  color: #ff4d4f;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.unchanged {
+  color: #52c41a;
+  font-size: 12px;
+}
+
+.codeBlocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.codeBlock {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.codeBlockHeader {
+  background: #fafafa;
+  padding: 8px 12px;
+  border-bottom: 1px solid #d9d9d9;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.codeContent {
+  margin: 0;
+  padding: 12px;
+  background: #fff;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  max-height: 300px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .codeBlocks {
+    grid-template-columns: 1fr;
+  }
+}

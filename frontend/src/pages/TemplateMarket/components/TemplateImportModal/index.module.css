@@ -1,0 +1,36 @@
+.modalTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.titleIcon {
+  color: #1677ff;
+  font-size: 16px;
+}
+
+/* 模板信息预览 */
+.templateInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 20px;
+}
+
+.desc {
+  font-size: 12px !important;
+  display: block;
+  margin-top: 2px;
+}
+
+/* 底部按钮区 */
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}

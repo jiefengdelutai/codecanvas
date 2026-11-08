@@ -1,0 +1,490 @@
+/* 主容器 */
+.codeMode {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  background: #f3f3f3;
+}
+
+.codeMode.darkMode {
+  background: #1e1e1e;
+}
+
+/* 活动栏 - 最左侧图标栏 */
+.activityBar {
+  width: 48px;
+  background: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+  border-right: 1px solid #e0e0e0;
+}
+
+.darkMode .activityBar {
+  background: #333333;
+  border-right-color: #252526;
+}
+
+.activityIcons {
+  display: flex;
+  flex-direction: column;
+}
+
+.activityIcon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #616161;
+  font-size: 20px;
+  transition: all 0.2s ease;
+  border-left: 2px solid transparent;
+}
+
+.activityIcon:hover {
+  color: #333333;
+}
+
+.activityIcon.activeIcon {
+  color: #1890ff;
+  border-left-color: #1890ff;
+  background: rgba(24, 144, 255, 0.1);
+}
+
+.darkMode .activityIcon {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.darkMode .activityIcon:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.darkMode .activityIcon.activeIcon {
+  color: #fff;
+  border-left-color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.collapseBtn {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #616161;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  border-top: 1px solid #e0e0e0;
+}
+
+.collapseBtn:hover {
+  color: #333333;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.darkMode .collapseBtn {
+  color: rgba(255, 255, 255, 0.6);
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.darkMode .collapseBtn:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* 侧边栏 */
+.sidebar {
+  width: 220px;
+  background: #f3f3f3;
+  color: #333333;
+  overflow: hidden;
+  transition: width 0.2s ease;
+  flex-shrink: 0;
+  border-right: 1px solid #e0e0e0;
+}
+
+.darkMode .sidebar {
+  background: #252526;
+  color: #cccccc;
+  border-right-color: #1e1e1e;
+}
+
+.sidebar.collapsed {
+  width: 0;
+}
+
+.panelContent {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.panelTitle {
+  padding: 10px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #616161;
+  background: #f3f3f3;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.darkMode .panelTitle {
+  color: #bbbbbb;
+  background: #252526;
+  border-bottom-color: #3c3c3c;
+}
+
+/* 文件列表 */
+.fileList {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.fileItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.1s ease;
+}
+
+.fileItem:hover {
+  background: #e4e6e8;
+}
+
+.fileItem.activeFile {
+  background: #d6ebff;
+}
+
+.darkMode .fileItem:hover {
+  background: #2a2d2e;
+}
+
+.darkMode .fileItem.activeFile {
+  background: #37373d;
+}
+
+.fileItem span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 设置项 */
+.settingItem {
+  padding: 12px 16px;
+}
+
+.settingLabel {
+  font-size: 15px;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+.darkMode .settingLabel {
+  color: #cccccc;
+}
+
+.themeRadio {
+  width: 100%;
+}
+
+.themeRadio :global(.ant-radio-button-wrapper) {
+  background: #ffffff;
+  border-color: #d9d9d9;
+  color: #333333;
+}
+
+.themeRadio :global(.ant-radio-button-wrapper:hover) {
+  color: #1890ff;
+}
+
+.themeRadio :global(.ant-radio-button-wrapper-checked) {
+  background: #1890ff;
+  border-color: #1890ff;
+  color: #fff;
+}
+
+.darkMode .themeRadio :global(.ant-radio-button-wrapper) {
+  background: #3c3c3c;
+  border-color: #3c3c3c;
+  color: #cccccc;
+}
+
+.darkMode .themeRadio :global(.ant-radio-button-wrapper:hover) {
+  color: #fff;
+}
+
+.darkMode .themeRadio :global(.ant-radio-button-wrapper-checked) {
+  background: #0e639c;
+  border-color: #0e639c;
+  color: #fff;
+}
+
+.fontSlider {
+  width: 100%;
+}
+
+.fontSlider :global(.ant-slider-track) {
+  background: #1890ff;
+}
+
+.fontSlider :global(.ant-slider-handle) {
+  border-color: #1890ff;
+}
+
+.fontSlider :global(.ant-slider-rail) {
+  background: #e0e0e0;
+}
+
+.darkMode .fontSlider :global(.ant-slider-track) {
+  background: #0e639c;
+}
+
+.darkMode .fontSlider :global(.ant-slider-handle) {
+  border-color: #0e639c;
+}
+
+.darkMode .fontSlider :global(.ant-slider-rail) {
+  background: #3c3c3c;
+}
+
+/* 拖拽状态 */
+.dragging {
+  cursor: col-resize;
+  user-select: none;
+}
+
+.dragging * {
+  pointer-events: none;
+}
+
+.dragging .resizer {
+  pointer-events: auto;
+}
+
+/* 拖拽分隔条 */
+.resizer {
+  width: 4px;
+  background: transparent;
+  cursor: col-resize;
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+  position: relative;
+}
+
+.resizer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -3px;
+  right: -3px;
+  bottom: 0;
+  z-index: 10;
+}
+
+.resizer:hover,
+.resizer.active {
+  background: #007acc;
+}
+
+.darkMode .resizer:hover,
+.darkMode .resizer.active {
+  background: #0e639c;
+}
+
+/* 编辑器区域 */
+.editorArea {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: #1e1e1e;
+  flex-shrink: 0;
+}
+
+.codeMode:not(.darkMode) .editorArea {
+  background: #fffffe;
+}
+
+.editorTabs {
+  display: flex;
+  background: #252526;
+  border-bottom: 1px solid #1e1e1e;
+  overflow-x: auto;
+}
+
+.codeMode:not(.darkMode) .editorTabs {
+  background: #ececec;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  transition: all 0.1s ease;
+  user-select: none;
+  border-right: 1px solid #1e1e1e;
+  white-space: nowrap;
+}
+
+.codeMode:not(.darkMode) .tab {
+  color: #333333;
+  border-right: 1px solid #d4d4d4;
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.codeMode:not(.darkMode) .tab:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.tab.active {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+.codeMode:not(.darkMode) .tab.active {
+  background: #fffffe;
+  color: #333333;
+}
+
+.editorContent {
+  flex: 1;
+  overflow: hidden;
+}
+
+/* 预览区域 */
+.preview {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.darkMode .preview {
+  border-left-color: #3c3c3c;
+}
+
+.previewHeader {
+  padding: 8px 16px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e8e8e8;
+  font-weight: 500;
+  font-size: 15px;
+  color: #333;
+}
+
+.previewContent {
+  flex: 1;
+  position: relative;
+  background: white;
+  overflow: auto;
+}
+
+.previewFrame {
+  width: 1024px;
+  height: 768px;
+  border: none;
+  background: white;
+  transform-origin: top left;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .preview {
+    width: 35%;
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .codeMode {
+    flex-direction: column;
+  }
+
+  .activityBar {
+    width: 100%;
+    height: 40px;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .activityIcons {
+    flex-direction: row;
+    flex: 1;
+  }
+
+  .activityIcon {
+    width: 40px;
+    height: 40px;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+  }
+
+  .activityIcon.activeIcon {
+    border-left-color: transparent;
+    border-bottom-color: #1890ff;
+  }
+  
+  .darkMode .activityIcon.activeIcon {
+    border-bottom-color: #fff;
+  }
+
+  .collapseBtn {
+    width: 40px;
+    height: 40px;
+    border-top: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 150px;
+    transition: height 0.2s ease;
+  }
+
+  .sidebar.collapsed {
+    width: 100%;
+    height: 0;
+  }
+
+  .editorArea {
+    flex: 1;
+  }
+
+  .preview {
+    width: 100%;
+    min-width: unset;
+    height: 200px;
+    border-left: none;
+    border-top: 1px solid #e8e8e8;
+  }
+
+  .tab {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}

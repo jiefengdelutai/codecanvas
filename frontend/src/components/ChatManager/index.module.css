@@ -1,0 +1,29 @@
+/* 聊天管理器组件样式 */
+.chatManager {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+
+/* 加载状态容器 */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 16px;
+}
+
+.loadingText {
+  color: #8c8c8c;
+  font-size: 14px;
+}
+
+/* 确保子组件占满容器 */
+.chatManager > * {
+  flex: 1;
+  height: 100%;
+}

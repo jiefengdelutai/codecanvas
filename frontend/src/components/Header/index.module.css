@@ -1,0 +1,24 @@
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s;
+  color: #000;
+}
+
+.navItem:hover {
+  background: #f0f0f0;
+}
+
+.navItemActive {
+  color: #1890ff;
+  background: #e6f7ff;
+  font-weight: 600;
+}
+
+.navItemActive:hover {
+  background: #e6f7ff;
+}

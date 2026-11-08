@@ -1,0 +1,114 @@
+.container {
+  display: flex;
+  height: 80vh;
+  min-height: 500px;
+}
+
+/* 左侧预览区 */
+.previewPane {
+  flex: 1;
+  min-width: 0;
+  background: #f0f0f0;
+  border-right: 1px solid #e8e8e8;
+  overflow: hidden;
+}
+
+.previewIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: white;
+}
+
+/* 右侧信息区 */
+.infoPane {
+  width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.infoScroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 20px 16px;
+}
+
+.title {
+  margin: 0 0 10px !important;
+  font-size: 18px !important;
+  line-height: 1.4 !important;
+  color: #1a1a1a !important;
+}
+
+.description {
+  font-size: 13px !important;
+  color: #595959 !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+/* 元数据列表 */
+.metaList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.metaItem {
+  display: grid;
+  grid-template-columns: 16px 56px 1fr;
+  align-items: center;
+  gap: 8px;
+}
+
+.itemTag{
+  display: flex;
+  justify-content: center;
+}
+
+.metaIcon {
+  color: #bfbfbf;
+  font-size: 14px;
+}
+
+/* 标签区 */
+.tagsSection {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* 底部操作按钮 */
+.actions {
+  padding: 16px 20px;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 响应式：小屏竖向堆叠 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .previewPane {
+    height: 50vw;
+    min-height: 240px;
+    border-right: none;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .infoPane {
+    width: 100%;
+  }
+}

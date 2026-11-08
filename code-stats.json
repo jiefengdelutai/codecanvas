@@ -1,0 +1,65 @@
+{
+  "timestamp": "2026-05-26T10:09:53.709Z",
+  "frontend": {
+    "files": 86,
+    "lines": 14826,
+    "codeLines": 12166,
+    "commentLines": 937,
+    "blankLines": 1723,
+    "byExtension": {
+      ".css": {
+        "files": 26,
+        "lines": 3584,
+        "codeLines": 2909
+      },
+      ".tsx": {
+        "files": 41,
+        "lines": 8264,
+        "codeLines": 7128
+      },
+      ".ts": {
+        "files": 18,
+        "lines": 2940,
+        "codeLines": 2106
+      },
+      ".scss": {
+        "files": 1,
+        "lines": 38,
+        "codeLines": 23
+      }
+    }
+  },
+  "backend": {
+    "files": 30,
+    "lines": 4562,
+    "codeLines": 3567,
+    "commentLines": 446,
+    "blankLines": 549,
+    "byExtension": {
+      ".ts": {
+        "files": 29,
+        "lines": 4521,
+        "codeLines": 3529
+      },
+      ".sql": {
+        "files": 1,
+        "lines": 41,
+        "codeLines": 38
+      }
+    }
+  },
+  "total": {
+    "files": 116,
+    "lines": 19388,
+    "codeLines": 15733,
+    "commentLines": 1383,
+    "blankLines": 2272
+  },
+  "analysis": {
+    "frontendPercent": 77.33,
+    "backendPercent": 22.67,
+    "frontendCommentRatio": 7.7,
+    "backendCommentRatio": 12.5,
+    "averageCommentRatio": 8.79
+  }
+}

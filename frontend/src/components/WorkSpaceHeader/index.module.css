@@ -1,0 +1,224 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 24px;
+  background: white;
+  border-bottom: 1px solid #e8e8e8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  height: 48px;
+  position: relative;
+  z-index: 10;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.centerSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.rightSection {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.projectButton {
+  max-width: 180px;
+  overflow: hidden;
+}
+
+.projectButton :global(.ant-btn-icon + span),
+.projectButton > span:last-child {
+  display: inline-block;
+  max-width: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #666;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  color: #1890ff;
+  background: rgba(24, 144, 255, 0.1);
+}
+
+.saveButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.saveButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(24, 144, 255, 0.3);
+}
+
+.modeSwitch {
+  font-weight: 500;
+}
+
+.modeSwitch .ant-segmented-item {
+  padding: 8px 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.modeSwitch .ant-segmented-item-selected {
+  font-weight: 600;
+}
+
+/* 编辑和预览按钮样式 */
+.navButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  min-width: 40px;
+  justify-content: center;
+  margin: 0 8px;
+}
+
+.navButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navButton.active {
+  background: linear-gradient(135deg, #53acff, #096dd9);
+  border-color: #53acff;
+  color: white;
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+  position: relative;
+}
+
+.navButton.active:hover {
+  background: linear-gradient(135deg, #53acff, #0050b3);
+  border-color: #53acff;
+  box-shadow: 0 6px 16px rgba(24, 144, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.navButton.active .anticon {
+  color: white;
+}
+
+/* 编辑模式按钮特殊样式 */
+.navButton.active::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #53acff, #1a7ac4, #53acff);
+  border-radius: 8px;
+  z-index: -1;
+  opacity: 0.3;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+
+/* 预览按钮样式 */
+.navButton:not(.active) {
+  border-color: #d9d9d9;
+  color: #666;
+}
+
+.navButton:not(.active):hover {
+  border-color: #1890ff;
+  color: #1890ff;
+}
+
+/* 在线用户显示 */
+.onlineUsers {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 16px;
+  padding: 4px 12px;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.onlineLabel {
+  font-size: 13px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .header {
+    padding: 6px 16px;
+    height: 44px;
+  }
+  
+  .leftSection,
+  .rightSection {
+    flex: 0 0 auto;
+  }
+  
+  .centerSection {
+    flex: 1;
+    margin: 0 16px;
+  }
+  
+  .backButton,
+  .saveButton {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  
+  .modeSwitch .ant-segmented-item {
+    padding: 6px 16px;
+    font-size: 13px;
+  }
+  
+  .onlineUsers {
+    margin-left: 8px;
+    padding: 4px 8px;
+  }
+  
+  .onlineLabel {
+    font-size: 12px;
+  }
+}
